@@ -176,7 +176,7 @@ export default {
     created(){
         if (this.transportadora) {
             this.form.nome = this.transportadora.nome
-            this.form.limite_credito = this.transportadora.limite_credito
+            this.form.limite_credito = this.transportadora.limite_credito*100
             this.form.data_analise_credito = new Date(this.transportadora.data_analise_credito).toISOString().slice(0,10)
             this.form.endereco = this.transportadora.endereco
             this.form.cidade = this.transportadora.cidade
